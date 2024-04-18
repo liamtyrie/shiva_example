@@ -45,7 +45,7 @@ export const App = () => {
 					height: "100vh",
 					position: "fixed",
 					zIndex: 3,
-					opacity: 0.3,
+					opacity: 1,
 				}}
 			>
 				{
@@ -79,7 +79,7 @@ export const App = () => {
 					width: "100vw",
 					position: "absolute",
 					zIndex: 4,
-					opacity: 0.5,
+					opacity: 0.4,
 				}}
 			></div>
 			<Scene />

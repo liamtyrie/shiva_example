@@ -16,7 +16,7 @@ export default function Background() {
 			clearTimeout(timeoutId)
 			timeoutId = setTimeout(() => {
 				setMouseMove(false)
-			}, 10) // Adjust this value as needed (e.g., 500 milliseconds)
+			}, 20) // Adjust this value as needed (e.g., 500 milliseconds)
 		}
 
 		// Add event listener for mousemove
@@ -32,7 +32,7 @@ export default function Background() {
 	console.log(gradientPosition)
 	const uniforms = useMemo(() => {
 		return {
-			uTime: { value: 10 },
+			uTime: { value: 0 },
 			uColor: {
 				value: [
 					new THREE.Color("rgba(0,0,0,1)"),
@@ -47,7 +47,7 @@ export default function Background() {
 	console.log(mouseMove)
 
 	useFrame(() => {
-		uniforms.uTime.value += mouseMove === true ? 0.0009 : 0.00001
+		uniforms.uTime.value += mouseMove === true ? 0.0001 : 0.00001
 	}, [mouseMove])
 
 	useEffect(() => {
